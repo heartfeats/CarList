@@ -1,0 +1,18 @@
+<h1>Car List</h1>
+<ul>
+  @foreach(var Car in Model)
+  {
+    <ul>
+      <li>@Car.GetMake()</li>
+      <ul>
+        <li>@Car.GetModel()</li>
+        <li>@Car.GetYear()</li>
+        <li>@Car.GetColor()</li>
+      </ul>
+    </ul>
+  }
+</ul>
+<p><a href="/">Add another task</a></p>
+<form action="/car/list/clear" method="post">
+  <button type="submit" name="button">Clear All Cars</button>
+</form>
